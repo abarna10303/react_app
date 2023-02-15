@@ -3,6 +3,7 @@
     width: 85%;
     margin: 50px auto;
     display: flex;
+    justify-content: space-between;
 }
 .lbl,.txt,.btn
 {
@@ -12,4 +13,9 @@
 .txt
 {
     padding: 5px;
+}
+.task-container
+{
+    display: flex;
+    flex-direction: column;
 }
