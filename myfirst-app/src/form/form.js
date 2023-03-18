@@ -42,16 +42,11 @@ const Form = () => {
   };
   const handlingRemove=(index)=>{
         removeTask=[...tasks]; 
-        tasks.splice(index,1)
+        tasks.splice(index,1);
         setRemoveTask(removeTask);
   };
   const updateValues=(e,index)=>
   {
-    // tasks[index].priority.checked;
-    // setTasks(tasks[0].priority===false);
-    //  setTasks(value[index].priority);
-    // tasks[index].priority=e.target.checked;
-    // tasks[index].isCompleted=e.target.checked;
     if(e.target.name==="updatePriority" || e.target.name==="updatePriority1")
     {
       tasks[index].priority=e.target.checked;
@@ -60,9 +55,6 @@ const Form = () => {
     {
       tasks[index].isCompleted=e.target.checked;
     }
-    // console.log( tasks[index].priority);
-    // console.log(tasks[index]);
-    console.log(e.target.checked);
   }
   return (
     <div className="container">
@@ -88,7 +80,7 @@ const Form = () => {
           onChange={handleInput}
         ></input>
         <label>isCompleted Filter</label>
-
+        </form>
         {Boolean(priority1) === false && Boolean(completion) === false && (
           <div className="task-container">
             <h1>Task Details</h1>
@@ -196,7 +188,7 @@ const Form = () => {
             })}
           </div>
         )}
-      </form>
+      
     </div>
   );
 };
